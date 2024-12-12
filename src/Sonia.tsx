@@ -42,7 +42,9 @@ export function Sonia() {
 
   return (
     <div className="Sonia">
-      
+      <div className="header">
+      </div>
+
       {showImage && (
         <div className="image-title-container">
           <Image
