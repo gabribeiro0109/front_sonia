@@ -15,7 +15,7 @@ export function Sonia() {
 
   const [newInputValue, setNewInputValue] = useState('');
   const [messages, setMessages] = useState<Message[]>([]);
-  const [showImage, setShowImage] = useState(true); // Estado para controlar a visibilidade da imagem/título
+  const [showImage, setShowImage] = useState(true); 
 
   const newMessage: React.FormEventHandler = async (e) => {
     e.preventDefault();
@@ -36,7 +36,6 @@ export function Sonia() {
     }]);
     setMessages(newMessages);
 
-    // Após enviar a mensagem, ocultamos a imagem/título
     setShowImage(false);
   };
 
