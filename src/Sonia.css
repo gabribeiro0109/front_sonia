@@ -1,0 +1,91 @@
+.Sonia {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  height: 100vh;
+  position: relative;
+}
+
+.image-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 9rem;
+}
+
+.messages-container {
+  display: flex;
+  flex-direction: column; /* Alinha mensagens em coluna */
+  gap: 0.5rem; /* Espaçamento entre mensagens */
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  margin-bottom: 6rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.message {
+  display: inline-block; /* Assegura que a caixa só use o espaço necessário */
+  border-radius: 5px;
+  padding: 0.5rem 1rem; /* Espaçamento interno equilibrado */
+  font-family: 'Inter', sans-serif; /* Fonte usada */
+  font-size: 1rem; /* Tamanho do texto */
+  max-width: 70%; /* Largura máxima da mensagem */
+  word-wrap: break-word; /* Quebra palavras muito longas */
+  overflow-wrap: break-word;
+  margin: 0; 
+}
+
+.message.sonia {
+  background-color: #d9dede;
+  align-self: flex-start; /* Alinha mensagens de Sonia à esquerda */
+  text-align: left;
+}
+
+.message.user {
+  background-color: #007BFF; /* Azul para mensagens do usuário */
+  color: white; /* Texto branco para contraste */
+  align-self: flex-end; /* Alinha mensagens do usuário à direita */
+  text-align: right;
+}
+
+
+.input-form {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.input-form input[type="text"] {
+  flex-grow: 1;
+  line-height: 2;
+  padding: 0.5rem;
+  font-family: 'Inter', sans-serif; /* Fonte 'Inter' no input */
+  border: 2px solid #ccc; /* Borda visível */
+  border-radius: 50px; /* Bordas arredondadas */
+  background-color: transparent; /* Fundo transparente */
+  transition: all 0.3s ease; /* Transição suave para o foco */
+  outline: none; /* Remover o contorno de foco */
+}
+
+.input-form input[type="text"]:focus {
+  border: 2px solid #007BFF; /* Borda azul quando o input é focado */
+  background-color: transparent; /* Manter fundo transparente */
+  box-shadow: none; /* Remover a sombra ao focar */
+}
+
+.input-form button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
