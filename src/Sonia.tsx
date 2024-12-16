@@ -1,8 +1,9 @@
-import { SendOutlined } from '@ant-design/icons';  
 import { Image } from 'antd';
 import './Sonia.css'
 import { useState } from 'react';
 import React from 'react';
+import InputMessage from './components/InputMessage/InputMessage.tsx'
+import Layout, { Content, Header } from 'antd/es/layout/layout';
 
 const functionUrl = ""
 
@@ -40,39 +41,40 @@ export function Sonia() {
   };
 
   return (
-    <div className="Sonia">
-      <div className="header">
-      </div>
+    <>
+    
+      <Layout>
+      
+      <Header id='header'></Header>
 
-      {showImage && (
-        <div className="image-title-container">
-          <Image
-            style={{ width: 170, height: 170, borderRadius: '50%' }}
-            src="/sonia2.png"
-          />
-          <h2 style={{ fontFamily: 'Inter, sans-serif', fontWeight: '400' }}>Pergunte para Sonia</h2>
+      <Content className="Sonia">
+      
+        {showImage && (
+          <div className="image-title-container">
+            <Image
+              style={{ width: 170, height: 170, borderRadius: '50%' }}
+              src="/sonia2.png"
+            />
+            <h2 style={{ fontFamily: 'Inter, sans-serif', fontWeight: '400' }}>Pergunte para Sonia</h2>
+          </div>
+        )}
+
+        <div className="messages-container">
+          {messages.map((message, index) => (
+            <p key={index} className={'message ' + message.sender}>
+              {message.text}
+            </p>
+          ))}
         </div>
-      )}
 
-      <div className="messages-container">
-        {messages.map((message, index) => (
-          <p key={index} className={'message ' + message.sender}>
-            {message.text}
-          </p>
-        ))}
-      </div>
+        <form className="input-form" >
+          <InputMessage value={newInputValue} change={e => setNewInputValue(e.currentTarget.value)} click={newMessage}></InputMessage>
+        </form>
 
-      <form className="input-form" onSubmit={newMessage}>
-        <input type="text" 
-          placeholder="Faça uma pergunta para assistente virtual Sonia" 
-          value={newInputValue}
-          onChange={e => setNewInputValue(e.currentTarget.value)}>
-        </input>
-        <button type="submit">
-          <SendOutlined />
-        </button>
-      </form>
+      </Content>
 
-    </div>
+      </Layout>
+   
+    </>
   );
 }

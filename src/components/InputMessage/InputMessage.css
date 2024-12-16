@@ -1,0 +1,17 @@
+#flex{
+  margin: 2rem;
+}
+
+#input_message{
+  flex-grow: 1;
+  padding: 0.5rem;
+  border-radius: 50px; 
+  border: 2px solid #ccc; 
+  display: flex;
+  justify-content: center;
+}
+
+#button{
+  border: 2px solid #ccc; 
+  color: #A2B0C3;
+}
