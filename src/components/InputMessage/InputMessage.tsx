@@ -27,6 +27,7 @@ const InputMessage: React.FC<InputMessageProps> = ({ value, change, click }) => 
       icon={<SendOutlined/>}
       onClick={click}
       size = 'large'
+      disabled={!value.trim()} 
     />
 
     </Flex>
