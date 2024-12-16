@@ -22,7 +22,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 16rem;
+  padding-top: 14rem;
 }
 
 .messages-container {
