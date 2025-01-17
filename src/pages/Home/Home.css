@@ -1,0 +1,27 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    position: relative;
+    background: radial-gradient(circle, #89BCFF 0%, rgba(255,255,255,1) 60%);
+    filter: blur(0px);
+    backdrop-filter: blur(20px); 
+    margin: 0;
+    align-items: center;
+    
+}
+  
+#header{
+    background-color: #89BCFF;
+    height: 8vh;
+}
+  
+#button-container{
+    display: flex;
+    justify-content: center;
+}
+
+#container{
+    align-items: center;
+    padding-top: 20rem;
+}

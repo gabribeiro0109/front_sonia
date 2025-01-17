@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input ,Button, Flex} from 'antd';
 import { SendOutlined } from '@ant-design/icons';
-import './InputMessage.css'
+import './InputMessage.css';
 
 interface InputMessageProps {
   value: string; 
@@ -12,12 +12,11 @@ interface InputMessageProps {
 const InputMessage: React.FC<InputMessageProps> = ({ value, change, click }) => {
   return (
     <>
-    <Flex  id='flex' gap={'0.5rem'} align='center'>
+    <Flex  id='flex' gap={'0.5rem'} align='center' >
       
       <Input 
       id='input_message'
       placeholder="Faça uma pergunta para assistente virtual Sonia"
-      style={{ width: '90%' }}
       value={value}
       onChange={change} 
     />
